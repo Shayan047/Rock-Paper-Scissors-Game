@@ -1,4 +1,4 @@
-const randomSign = ["paper", "scissors", "rock"];
+const randomSign = ["Paper", "Scissors", "Rock"];
 var resultText = "";
 var score = 0;
 
