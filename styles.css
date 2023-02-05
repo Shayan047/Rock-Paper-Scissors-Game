@@ -76,7 +76,7 @@ body {
     margin-right: 20px;
 }
 
-.siz {
+.scissors {
     margin-left: 20px;
 }
 
@@ -220,4 +220,79 @@ body {
     transition: 0.5s;
     visibility: visible;
     transform: scale(1);
+}
+
+@media (max-width: 1000px) {
+    .scoreboard {
+        width: 300px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .title {
+        margin-left: 15px;
+    }
+
+    .title img {
+        height: 80px;
+        width: 120px;
+    }
+
+    .score {
+        height: 70px;
+        width: 70px;
+        border-radius: 5px;
+        margin-right: 15px;
+    }
+
+    .signs {
+        margin-top: 100px;
+        height: 400px;
+        width: 400px;
+        background-size: 80%;
+    }
+
+    .sign img, .play img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .rules {
+        margin-top: 100px;
+        position: initial;
+    }
+
+    .rules:hover {
+        transform: none;
+    }
+
+    .rules-popup {
+        width: 350px;
+        top: 25%;
+    }
+
+    .play {
+        margin-top: 80px;
+        height: 400px;
+        width: 400px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .result {
+        order: 1;
+    }
+
+    .play p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .userSign p, .chosenSign {
+        margin-right: 20px;
+    }
+
+    .comSign p, .randomSign {
+        margin-left: 20px;
+    }
 }

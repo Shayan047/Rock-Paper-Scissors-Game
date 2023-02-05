@@ -57,7 +57,7 @@ const result = (userSign, comSign) => {
         $(".score h1").text(score);
         $(".result h1").text(resultText);
 
-    }, "500")
+    }, "1000")
 }
 
 
