@@ -18,13 +18,13 @@ const result = (userSign, comSign) => {
         $(".result").toggleClass("hide");
         $(".comSign").toggleClass("hide");
         $(".randomSign").attr("src", "images/" + comSign + ".png");
-
+        console.log(comSign + userSign);
         
         if(userSign === comSign) {
-            resultText = "Draw";
+            console.log("test");
         }
-        else if(userSign === "paper") {
-            if(comSign === "rock") {
+        else if(userSign === "Paper") {
+            if(comSign === "Rock") {
                 resultText = "you win";
                 score ++;
             }
@@ -33,8 +33,8 @@ const result = (userSign, comSign) => {
                 if(score > 0) score--;
             }
         }
-        else if(userSign === "rock") {
-            if(comSign === "scissors") {
+        else if(userSign === "Rock") {
+            if(comSign === "Scissors") {
                 resultText = "you win";
                 score ++;
             }
@@ -43,8 +43,8 @@ const result = (userSign, comSign) => {
                 if(score > 0) score--;
             }
         }
-        else if(userSign === "scissors") {
-            if(comSign === "paper") {
+        else if(userSign === "Scissors") {
+            if(comSign === "Paper") {
                 resultText = "you win";
                 score ++;
             }
