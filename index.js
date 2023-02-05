@@ -21,7 +21,7 @@ const result = (userSign, comSign) => {
         console.log(comSign + userSign);
         
         if(userSign === comSign) {
-            console.log("test");
+            resultText = "draw";
         }
         else if(userSign === "Paper") {
             if(comSign === "Rock") {
