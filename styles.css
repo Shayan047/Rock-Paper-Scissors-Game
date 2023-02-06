@@ -134,8 +134,18 @@ body {
     margin-bottom: 50px;
 }
 
+span {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: white;
+    animation: hover-up 2s;
+    opacity: 0;
+}
+
 .result {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -168,12 +178,18 @@ body {
     transform: scale(1.1);
 }
 
+.comSign {
+    display: none;
+    flex-direction: column;
+}
+
 .hide {
     display: none;
 }
 
 .show {
     display: flex;
+    animation: fade-in 0.5s;
 }
 
 .rules-popup {
@@ -220,6 +236,28 @@ body {
     transition: 0.5s;
     visibility: visible;
     transform: scale(1);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hover-up {
+    0% {
+        top: 40%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 30%;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -296,3 +334,4 @@ body {
         margin-left: 20px;
     }
 }
+

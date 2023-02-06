@@ -7,18 +7,14 @@ const generateComSign = () => {
 };
 
 const result = (userSign, comSign) => {
+    $("span").text("");
     $(".signs").toggleClass("hide");
     $(".play").toggleClass("show");
     $(".chosenSign").attr("src", "images/" + userSign + ".png");
-    $(".result").toggleClass("hide");
-    $(".comSign").toggleClass("hide");
 
     setTimeout(function() {
-
-        $(".result").toggleClass("hide");
-        $(".comSign").toggleClass("hide");
+        $(".comSign").toggleClass("show");
         $(".randomSign").attr("src", "images/" + comSign + ".png");
-        console.log(comSign + userSign);
         
         if(userSign === comSign) {
             resultText = "draw";
@@ -54,10 +50,17 @@ const result = (userSign, comSign) => {
             }
         }
 
-        $(".score h1").text(score);
+        if(resultText === "you win") $("span").text("+1");
+        else if(resultText === "you lose" && score > 0) $("span").text("-1");
+
+        setTimeout(function() {
+            $(".result").toggleClass("show");
+            $(".score h1").text(score);
+        }, "500");
+
         $(".result h1").text(resultText);
 
-    }, "1000")
+    }, "500")
 }
 
 
@@ -72,6 +75,8 @@ $( document ).ready(function() {
     $(".result button").on("click", function() {
         $(".signs").toggleClass("hide");
         $(".play").toggleClass("show");
+        $(".comSign").toggleClass("show");
+        $(".result").toggleClass("show");
     });
 
     $(".rules").on("click", function() {
