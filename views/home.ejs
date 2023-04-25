@@ -1,0 +1,22 @@
+<%- include("header") -%>
+<div class="high-scores">
+    <p>High Scores</p>
+</div>
+
+<div class="scores-popup"></div>
+
+<div class="home-imgs">
+    <img src="images/Paper.png" alt="">
+    <img src="images/Scissors.png" alt="">
+    <img src="images/Rock.png" alt="">
+</div>
+
+<div class="login">
+    <form action="/" method="post">
+        <label>Username</label>
+        <input type="text" name="playerName" placeholder="Max 6 Letters" required="required" maxlength="6">
+        <button type="submit">Play</button>
+    </form>
+</div>
+
+<%- include("footer") -%>
